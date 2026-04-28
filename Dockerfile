@@ -11,7 +11,7 @@ RUN set -ex \
 	&& tar -xz --strip-components=1 -f /tmp/monitoring.tgz
 
 # build image
-FROM docker.io/icinga/icingaweb2:latest@sha256:8182f4e1f1c331ef738baa37eea51a468a8d9ee50bc48df552f02ee48a69bfc7
+FROM docker.io/icinga/icingaweb2:latest@sha256:13729b546b8fac4caeacf71bde75cd748d8b9f8efd68682f67aff5673998ab4b
 
 COPY --from=downloader /monitoring /usr/share/icingaweb2/modules/monitoring
 
