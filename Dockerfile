@@ -21,5 +21,5 @@ RUN set -ex \
 FROM docker.io/icinga/icingaweb2:latest@sha256:13729b546b8fac4caeacf71bde75cd748d8b9f8efd68682f67aff5673998ab4b
 
 COPY --from=downloader /monitoring /usr/share/icingaweb2/modules/monitoring
-COPY --from=downloader /grafana/usr/share/icingaweb2/modules/grafana
+COPY --from=downloader /grafana /usr/share/icingaweb2/modules/grafana
 
