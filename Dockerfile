@@ -18,7 +18,7 @@ RUN set -ex \
 	&& tar -xz --strip-components=1 -f /tmp/grafana.tgz
 
 # build image
-FROM docker.io/icinga/icingaweb2:latest@sha256:e7f468327feabdb99b65b7700f2b7aaa0083308ce072ba3e40122debef6da058
+FROM docker.io/icinga/icingaweb2:latest@sha256:3965f1846078783ec5d149a62b17477e119d4f67f3c031e8cc237e44ee35e4e5
 
 COPY --from=downloader /monitoring /usr/share/icingaweb2/modules/monitoring
 COPY --from=downloader /grafana /usr/share/icingaweb2/modules/grafana
